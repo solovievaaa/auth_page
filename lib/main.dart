@@ -23,10 +23,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           body: Container(
+            decoration: const BoxDecoration( // настройка изорбражения фона
+              image: DecorationImage(
+                image: AssetImage('assets/original_oboi.jpeg'),
+                fit: BoxFit.cover,
+              ),
+            ),
             width: double.infinity, // позволяет выравнять по центру в строке ??
             child: Column(children: [ // здесть мог бы быть модификатор const
               SizedBox(height: 60,), // отступ картинки от верхней границы, по общему правилу сверху слева
-              SizedBox(width: 110, height: 84, child: Placeholder(),), // место для картинки с заданными размерами + место задано пустым
+              const SizedBox(width: 110, height: 84, child: Image(image: AssetImage('assets/dart1.jpg')),), // настройка изорбражения, тут было место для картинки с заданными размерами + место задано пустым
               SizedBox(height: 20,), // отступ текста от картинки
               Text('Введите логин в виде 10 цифр номера телефона',
               style: TextStyle(fontSize: 16, color: Color.fromRGBO(0, 0, 0, 0.6)),),
