@@ -1,11 +1,15 @@
+import 'package:auth_page/file_demo.dart';
+import 'package:auth_page/shared_pref_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'networking.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(NetworkingScreen());
 }
 
-class MyApp extends StatelessWidget {
+/* class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 // figma (сайт) дает по макету номер цвета, размер отступов и тд
   @override
@@ -25,14 +29,14 @@ class MyApp extends StatelessWidget {
           body: Container(
             decoration: const BoxDecoration( // настройка изорбражения фона
               image: DecorationImage(
-                image: AssetImage('assets/original_oboi.jpeg'),
+                image: AssetImage('assets/unicorn_1.jpeg'),
                 fit: BoxFit.cover,
               ),
             ),
             width: double.infinity, // позволяет выравнять по центру в строке ??
             child: Column(children: [ // здесть мог бы быть модификатор const
               SizedBox(height: 60,), // отступ картинки от верхней границы, по общему правилу сверху слева
-              const SizedBox(width: 110, height: 84, child: Image(image: AssetImage('assets/dart1.jpg')),), // настройка изорбражения, тут было место для картинки с заданными размерами + место задано пустым
+              const SizedBox(width: 110, height: 84, child: Image(image: AssetImage('assets/dart-logo.png')),), // настройка изорбражения, тут было место для картинки с заданными размерами + место задано пустым
               SizedBox(height: 20,), // отступ текста от картинки
               Text('Введите логин в виде 10 цифр номера телефона',
               style: TextStyle(fontSize: 16, color: Color.fromRGBO(0, 0, 0, 0.6)),),
@@ -73,7 +77,7 @@ class MyApp extends StatelessWidget {
               )
           )
       ), // задает метод, вызываемый при нажатии на кнопку и надпись на кнопке
-              SizedBox(height: 32,),
+              SizedBox(height: 100,),
               InkWell(child: const Text('Регистрация', style: linkTextStyle,),
                   onTap: () {} ), // добавляет ссылку этот виджет
               // () {} дадут ошибку, метод и значение в константе не могут быть пустыми (если убрать const, кнопка станет активной)
@@ -86,6 +90,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+ */
 
 // красное подчеркивание - ошибка (нет запятых - ошибка, например)
 /* желтое подчеркивание - предупреждение (типа ты уверен, что так надо? через правую кнопку мыши можно увидеть предложения приложения)
